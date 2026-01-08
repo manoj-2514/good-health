@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block content %}
+
+<section class="card">
+    <h2>Personal Health Report</h2>
+
+    <p><b>Name:</b> {{ record.name }}</p>
+    <p><b>Age:</b> {{ record.age }}</p>
+    <p><b>Height:</b> {{ record.height }} cm</p>
+    <p><b>Weight:</b> {{ record.weight }} kg</p>
+
+    <h3 style="color: {{ color }};">
+        BMI: {{ record.bmi }} ({{ record.bmi_status }})
+    </h3>
+
+    <p>{{ advice }}</p>
+
+    <p><b>Lifestyle:</b> {{ record.lifestyle }}</p>
+    <p><b>Stress Level:</b> {{ record.stress }}</p>
+
+    <a class="btn" href="/">Check Again</a>
+</section>
+
+{% endblock %}
